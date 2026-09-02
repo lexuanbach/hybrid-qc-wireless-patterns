@@ -1,0 +1,15 @@
+{
+  "name": "reference",
+  "outage_p": 0.3,
+  "deadline_scale": 1.0,
+  "queue_scale": 1.0,
+  "error_scale": 1.0,
+  "shots": 512,
+  "reuse_scale": 1.0,
+  "w_deadline": 2.0,
+  "w_infeasible": 5.0,
+  "w_money": 0.5,
+  "w_energy": 0.3,
+  "money_scale": 0.01,
+  "energy_scale": 50.0
+}

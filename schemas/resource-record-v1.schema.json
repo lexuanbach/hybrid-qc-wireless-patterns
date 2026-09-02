@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/hqcw/resource-record-v1.schema.json",
+  "title": "Hybrid quantum-classical resource record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "provider", "backend", "generated_at", "valid_until", "nonce", "metrics", "provenance", "signature"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "provider": {"type": "string", "minLength": 1},
+    "backend": {"type": "string", "minLength": 1},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "valid_until": {"type": "string", "format": "date-time"},
+    "nonce": {"type": "string", "minLength": 8},
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["qubits", "max_shots"],
+      "properties": {
+        "qubits": {"type": "integer", "minimum": 1},
+        "max_shots": {"type": "integer", "minimum": 1}
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "value", "unit", "observed_at", "evidence", "uncertainty"],
+        "properties": {
+          "name": {"enum": ["queue_delay", "two_qubit_error", "price_per_shot", "completion_time"]},
+          "value": {"type": "number"},
+          "unit": {"enum": ["s", "1", "USD/shot"]},
+          "observed_at": {"type": "string", "format": "date-time"},
+          "evidence": {"enum": ["measured", "simulated", "modeled", "claimed"]},
+          "uncertainty": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["kind", "lower", "upper", "coverage"],
+            "properties": {
+              "kind": {"const": "interval"},
+              "lower": {"type": "number"},
+              "upper": {"type": "number"},
+              "coverage": {"type": "number", "minimum": 0, "maximum": 1}
+            }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["producer", "method", "source_id"],
+      "properties": {
+        "producer": {"type": "string"},
+        "method": {"type": "string"},
+        "source_id": {"type": "string"}
+      }
+    },
+    "signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "key_id", "value"],
+      "properties": {
+        "algorithm": {"const": "HMAC-SHA256-test-fixture"},
+        "key_id": {"type": "string"},
+        "value": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  }
+}

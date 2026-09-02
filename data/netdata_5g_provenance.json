@@ -1,0 +1,28 @@
+{
+  "source_url": "https://media.githubusercontent.com/media/tsinghua-fib-lab/NetData/main/Performance_5G_Weekday.csv",
+  "source_commit": "6c796243f896a4fc6b1b4236348c9af8722d397a",
+  "raw_sha256": "33a4a1530d6a871807ffae0a498a803c5631fd5edc33138369fdf88bf3a9f0a0",
+  "raw_rows": 1001280,
+  "selected_stations": [
+    "12751",
+    "12910",
+    "13411",
+    "12326"
+  ],
+  "selected_cells": [
+    "12751-1",
+    "12751-2",
+    "12751-0",
+    "12910-2",
+    "12910-3",
+    "12910-1",
+    "13411-0",
+    "13411-1",
+    "13411-5",
+    "12326-0",
+    "12326-2",
+    "12326-1"
+  ],
+  "aggregation": "48 half-hour network aggregates plus 576 cell-window means; mean/p95 PRB and traffic/user fields",
+  "license_note": "The upstream repository declared no license when accessed; the raw CSV is not redistributed."
+}

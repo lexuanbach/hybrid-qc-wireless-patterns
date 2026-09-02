@@ -1,0 +1,20 @@
+{
+  "weeks": [
+    {
+      "week": "X01",
+      "source_url": "https://www.cs.utexas.edu/~yzhang/research/AbileneTM/X01.gz",
+      "sha256": "d996a9115d2815eec158d5055452deb389f5546a96e0dfcbfae5c22a40372558"
+    },
+    {
+      "week": "X02",
+      "source_url": "https://www.cs.utexas.edu/~yzhang/research/AbileneTM/X02.gz",
+      "sha256": "e4646c3020e5904b3e4f3388899c15940b8156ade9fdaf9dd96b06a83f8066a5"
+    },
+    {
+      "week": "X03",
+      "source_url": "https://www.cs.utexas.edu/~yzhang/research/AbileneTM/X03.gz",
+      "sha256": "b90f058def353a78db4e5d65d329de867659add90b7ef4d918acb7ba88a8f040"
+    }
+  ],
+  "aggregation": "240 evenly spaced windows per 2016-window week"
+}

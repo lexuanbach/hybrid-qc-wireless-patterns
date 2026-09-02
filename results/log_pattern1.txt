@@ -1,0 +1,10 @@
+wrote 16 macros -> generated/pattern1.tex
+training-selected fixed: {12: 'local-sim', 20: 'fallback'}
+n                        12     20
+policy                            
+calibrated           -0.107 -0.191
+LinUCB               -0.122 -0.199
+QoS-constrained      -0.107 -0.191
+Pareto               -0.113 -0.645
+oracle               -0.107 -0.167
+train-selected fixed -0.113 -0.202

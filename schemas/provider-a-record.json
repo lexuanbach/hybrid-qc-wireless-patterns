@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "provider": "provider-a",
+  "backend": "qpu-a1",
+  "generated_at": "2004-03-01T00:00:00Z",
+  "valid_until": "2004-03-01T00:10:00Z",
+  "nonce": "provider-a-0001",
+  "capabilities": {"qubits": 127, "max_shots": 100000},
+  "metrics": [
+    {"name": "queue_delay", "value": 0.42, "unit": "s", "observed_at": "2004-03-01T00:00:00Z", "evidence": "modeled", "uncertainty": {"kind": "interval", "lower": 0.31, "upper": 0.56, "coverage": 0.95}},
+    {"name": "two_qubit_error", "value": 0.012, "unit": "1", "observed_at": "2004-03-01T00:00:00Z", "evidence": "claimed", "uncertainty": {"kind": "interval", "lower": 0.010, "upper": 0.014, "coverage": 0.95}},
+    {"name": "price_per_shot", "value": 0.000001, "unit": "USD/shot", "observed_at": "2004-03-01T00:00:00Z", "evidence": "claimed", "uncertainty": {"kind": "interval", "lower": 0.000001, "upper": 0.000001, "coverage": 1.0}}
+  ],
+  "provenance": {"producer": "provider-a-adapter", "method": "field-map-a-v1", "source_id": "fixture-a-0001"},
+  "signature": {"algorithm": "HMAC-SHA256-test-fixture", "key_id": "fixture-key", "value": "0000000000000000000000000000000000000000000000000000000000000000"}
+}
